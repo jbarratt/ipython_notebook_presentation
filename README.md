@@ -4,7 +4,9 @@ You won't find a typical slide deck here; much of the presentation consisted of 
 
 However, all of the notebooks demonstrated during the session are included.
 
-If you just want to view the slides, you can open up Presentation.slides.html.  in your browser. However, the demo links to the live notebooks will not work.
+[View the slides online](https://rawgit.com/jbarratt/ipython_notebook_presentation/master/Presentation.slides.html#/). This is a reveal.js HTML presentation.
+
+You can also clone the repository, then just open up Presentation.slides.html in your browser. However, the demo links to the live notebooks will not work.
 
 If you would like to open pre-rendered copies of them you can do so at [nbviewer](http://nbviewer.ipython.org/), but many of these demos only make sense to run 'live.'
 
