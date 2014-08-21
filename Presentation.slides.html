@@ -1872,7 +1872,9 @@ div.output_prompt {
 </code></pre>
 </div>
 </div>
-</div><div style=display:none>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1883,8 +1885,9 @@ div.output_prompt {
 <div class="stretch"><img src="PresentationImages/03_Process.png"/></div>
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1895,8 +1898,7 @@ div.output_prompt {
 <div class="stretch"><img src="PresentationImages/04_Tree.png"/></div>
 </div>
 </div>
-</div>
-    </div></section>
+</div></section>
     </section><section>
     <section>
     
@@ -2011,8 +2013,8 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="iterative-coding-example">Iterative Coding Example</h1>
-<p>&quot;What are the most popular links being tweeted about #oscon?&quot;</p>
-<div class="stretch"><img src="PresentationImages/OSCON_Tweets.png"/></div>
+<p>&quot;What are the most popular links being tweeted about #linuxcon?&quot;</p>
+<div class="stretch"><img src="PresentationImages/linuxcon_tweets.png"/></div>
 </div>
 </div>
 </div></section>
@@ -2045,7 +2047,7 @@ div.output_prompt {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[56]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2073,18 +2075,18 @@ In&nbsp;[56]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="interactive-example-search-for-oscon-">Interactive Example: Search for &#39;#oscon&#39;</h1>
+<h1 id="interactive-example-search-for-linuxcon-">Interactive Example: Search for &#39;#linuxcon&#39;</h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[59]:
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">search_results</span> <span class="o">=</span> <span class="n">twitter_api</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">tweets</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="s">&#39;#oscon&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">search_results</span> <span class="o">=</span> <span class="n">twitter_api</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">tweets</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="s">&#39;#linuxcon&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
 <span class="n">statuses</span> <span class="o">=</span> <span class="n">search_results</span><span class="p">[</span><span class="s">&#39;statuses&#39;</span><span class="p">]</span>
 
 <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">statuses</span><span class="p">)</span>
@@ -2092,7 +2094,7 @@ In&nbsp;[59]:
 <span class="c"># Original source for this loop:</span>
 <span class="c"># http://nbviewer.ipython.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb</span>
 
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">next_results</span> <span class="o">=</span> <span class="n">search_results</span><span class="p">[</span><span class="s">&#39;search_metadata&#39;</span><span class="p">][</span><span class="s">&#39;next_results&#39;</span><span class="p">]</span>
     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span> <span class="c"># No more results when next_results doesn&#39;t exist</span>
@@ -2128,7 +2130,7 @@ In&nbsp;[59]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[60]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2184,12 +2186,12 @@ In&nbsp;[60]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[62]:
+In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># We know the results are in &#39;statuses&#39;, let&#39;s peek at one.</span>
-<span class="k">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">statuses</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">statuses</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2206,60 +2208,90 @@ In&nbsp;[62]:
 {
  &quot;contributors&quot;: null, 
  &quot;truncated&quot;: false, 
- &quot;text&quot;: &quot;RT @timoreilly: Slides from my talk at #OSCON this morning: http://t.co/cO7YdrGLdY \&quot;We should get working on our real civilization now.\&quot;&quot;, 
+ &quot;text&quot;: &quot;RT @TechJournalist: the world\u2019s first 3D car #linuxcon http://t.co/bDMkG6lgQX&quot;, 
  &quot;in_reply_to_status_id&quot;: null, 
- &quot;id&quot;: 492004369723035648, 
+ &quot;id&quot;: 502283402863980545, 
  &quot;favorite_count&quot;: 0, 
- &quot;source&quot;: &quot;&lt;a href=\&quot;http://twitter.com\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter Web Client&lt;/a&gt;&quot;, 
+ &quot;source&quot;: &quot;&lt;a href=\&quot;http://twitter.com/download/android\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for Android&lt;/a&gt;&quot;, 
  &quot;retweeted&quot;: false, 
  &quot;coordinates&quot;: null, 
  &quot;entities&quot;: {
   &quot;symbols&quot;: [], 
   &quot;user_mentions&quot;: [
    {
-    &quot;id&quot;: 2384071, 
+    &quot;id&quot;: 15488482, 
     &quot;indices&quot;: [
      3, 
-     14
+     18
     ], 
-    &quot;id_str&quot;: &quot;2384071&quot;, 
-    &quot;screen_name&quot;: &quot;timoreilly&quot;, 
-    &quot;name&quot;: &quot;Tim O&apos;Reilly&quot;
+    &quot;id_str&quot;: &quot;15488482&quot;, 
+    &quot;screen_name&quot;: &quot;TechJournalist&quot;, 
+    &quot;name&quot;: &quot;Sean Kerner&quot;
    }
   ], 
   &quot;hashtags&quot;: [
    {
     &quot;indices&quot;: [
-     39, 
-     45
+     45, 
+     54
     ], 
-    &quot;text&quot;: &quot;OSCON&quot;
+    &quot;text&quot;: &quot;linuxcon&quot;
    }
   ], 
-  &quot;urls&quot;: [
+  &quot;urls&quot;: [], 
+  &quot;media&quot;: [
    {
-    &quot;url&quot;: &quot;http://t.co/cO7YdrGLdY&quot;, 
+    &quot;source_status_id_str&quot;: &quot;502221932486733824&quot;, 
+    &quot;expanded_url&quot;: &quot;http://twitter.com/TechJournalist/status/502221932486733824/photo/1&quot;, 
+    &quot;display_url&quot;: &quot;pic.twitter.com/bDMkG6lgQX&quot;, 
+    &quot;url&quot;: &quot;http://t.co/bDMkG6lgQX&quot;, 
+    &quot;media_url_https&quot;: &quot;https://pbs.twimg.com/media/BvhAL6SIAAA3vfG.jpg&quot;, 
+    &quot;source_status_id&quot;: 502221932486733824, 
+    &quot;id_str&quot;: &quot;502221931819827200&quot;, 
+    &quot;sizes&quot;: {
+     &quot;small&quot;: {
+      &quot;h&quot;: 255, 
+      &quot;resize&quot;: &quot;fit&quot;, 
+      &quot;w&quot;: 340
+     }, 
+     &quot;large&quot;: {
+      &quot;h&quot;: 480, 
+      &quot;resize&quot;: &quot;fit&quot;, 
+      &quot;w&quot;: 640
+     }, 
+     &quot;medium&quot;: {
+      &quot;h&quot;: 450, 
+      &quot;resize&quot;: &quot;fit&quot;, 
+      &quot;w&quot;: 600
+     }, 
+     &quot;thumb&quot;: {
+      &quot;h&quot;: 150, 
+      &quot;resize&quot;: &quot;crop&quot;, 
+      &quot;w&quot;: 150
+     }
+    }, 
     &quot;indices&quot;: [
-     60, 
-     82
+     55, 
+     77
     ], 
-    &quot;expanded_url&quot;: &quot;http://slidesha.re/1ocu4p6&quot;, 
-    &quot;display_url&quot;: &quot;slidesha.re/1ocu4p6&quot;
+    &quot;type&quot;: &quot;photo&quot;, 
+    &quot;id&quot;: 502221931819827200, 
+    &quot;media_url&quot;: &quot;http://pbs.twimg.com/media/BvhAL6SIAAA3vfG.jpg&quot;
    }
   ]
  }, 
  &quot;in_reply_to_screen_name&quot;: null, 
  &quot;in_reply_to_user_id&quot;: null, 
- &quot;retweet_count&quot;: 8, 
- &quot;id_str&quot;: &quot;492004369723035648&quot;, 
+ &quot;retweet_count&quot;: 3, 
+ &quot;id_str&quot;: &quot;502283402863980545&quot;, 
  &quot;favorited&quot;: false, 
  &quot;retweeted_status&quot;: {
   &quot;contributors&quot;: null, 
   &quot;truncated&quot;: false, 
-  &quot;text&quot;: &quot;Slides from my talk at #OSCON this morning: http://t.co/cO7YdrGLdY \&quot;We should get working on our real civilization now.\&quot;&quot;, 
+  &quot;text&quot;: &quot;the world\u2019s first 3D car #linuxcon http://t.co/bDMkG6lgQX&quot;, 
   &quot;in_reply_to_status_id&quot;: null, 
-  &quot;id&quot;: 492002326048022529, 
-  &quot;favorite_count&quot;: 4, 
+  &quot;id&quot;: 502221932486733824, 
+  &quot;favorite_count&quot;: 2, 
   &quot;source&quot;: &quot;&lt;a href=\&quot;https://about.twitter.com/products/tweetdeck\&quot; rel=\&quot;nofollow\&quot;&gt;TweetDeck&lt;/a&gt;&quot;, 
   &quot;retweeted&quot;: false, 
   &quot;coordinates&quot;: null, 
@@ -2269,50 +2301,78 @@ In&nbsp;[62]:
    &quot;hashtags&quot;: [
     {
      &quot;indices&quot;: [
-      23, 
-      29
+      25, 
+      34
      ], 
-     &quot;text&quot;: &quot;OSCON&quot;
+     &quot;text&quot;: &quot;linuxcon&quot;
     }
    ], 
-   &quot;urls&quot;: [
+   &quot;urls&quot;: [], 
+   &quot;media&quot;: [
     {
-     &quot;url&quot;: &quot;http://t.co/cO7YdrGLdY&quot;, 
+     &quot;expanded_url&quot;: &quot;http://twitter.com/TechJournalist/status/502221932486733824/photo/1&quot;, 
+     &quot;display_url&quot;: &quot;pic.twitter.com/bDMkG6lgQX&quot;, 
+     &quot;url&quot;: &quot;http://t.co/bDMkG6lgQX&quot;, 
+     &quot;media_url_https&quot;: &quot;https://pbs.twimg.com/media/BvhAL6SIAAA3vfG.jpg&quot;, 
+     &quot;id_str&quot;: &quot;502221931819827200&quot;, 
+     &quot;sizes&quot;: {
+      &quot;small&quot;: {
+       &quot;h&quot;: 255, 
+       &quot;resize&quot;: &quot;fit&quot;, 
+       &quot;w&quot;: 340
+      }, 
+      &quot;large&quot;: {
+       &quot;h&quot;: 480, 
+       &quot;resize&quot;: &quot;fit&quot;, 
+       &quot;w&quot;: 640
+      }, 
+      &quot;medium&quot;: {
+       &quot;h&quot;: 450, 
+       &quot;resize&quot;: &quot;fit&quot;, 
+       &quot;w&quot;: 600
+      }, 
+      &quot;thumb&quot;: {
+       &quot;h&quot;: 150, 
+       &quot;resize&quot;: &quot;crop&quot;, 
+       &quot;w&quot;: 150
+      }
+     }, 
      &quot;indices&quot;: [
-      44, 
-      66
+      35, 
+      57
      ], 
-     &quot;expanded_url&quot;: &quot;http://slidesha.re/1ocu4p6&quot;, 
-     &quot;display_url&quot;: &quot;slidesha.re/1ocu4p6&quot;
+     &quot;type&quot;: &quot;photo&quot;, 
+     &quot;id&quot;: 502221931819827200, 
+     &quot;media_url&quot;: &quot;http://pbs.twimg.com/media/BvhAL6SIAAA3vfG.jpg&quot;
     }
    ]
   }, 
   &quot;in_reply_to_screen_name&quot;: null, 
   &quot;in_reply_to_user_id&quot;: null, 
-  &quot;retweet_count&quot;: 8, 
-  &quot;id_str&quot;: &quot;492002326048022529&quot;, 
+  &quot;retweet_count&quot;: 3, 
+  &quot;id_str&quot;: &quot;502221932486733824&quot;, 
   &quot;favorited&quot;: false, 
   &quot;user&quot;: {
    &quot;follow_request_sent&quot;: false, 
    &quot;profile_use_background_image&quot;: true, 
    &quot;default_profile_image&quot;: false, 
-   &quot;id&quot;: 2384071, 
-   &quot;profile_background_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_background_images/3587880/notes.gif&quot;, 
-   &quot;verified&quot;: true, 
-   &quot;profile_text_color&quot;: &quot;000000&quot;, 
-   &quot;profile_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_images/2823681988/f4f6f2bed8ab4d5a48dea4b9ea85d5f1_normal.jpeg&quot;, 
-   &quot;profile_sidebar_fill_color&quot;: &quot;E0FF92&quot;, 
+   &quot;id&quot;: 15488482, 
+   &quot;profile_background_image_url_https&quot;: &quot;https://abs.twimg.com/images/themes/theme9/bg.gif&quot;, 
+   &quot;verified&quot;: false, 
+   &quot;profile_text_color&quot;: &quot;666666&quot;, 
+   &quot;profile_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_images/422904373/vulcan_salute_bigger_normal.png&quot;, 
+   &quot;profile_sidebar_fill_color&quot;: &quot;252429&quot;, 
    &quot;entities&quot;: {
     &quot;url&quot;: {
      &quot;urls&quot;: [
       {
-       &quot;url&quot;: &quot;http://t.co/5086iX7oyT&quot;, 
+       &quot;url&quot;: &quot;http://t.co/zA94vcOwI7&quot;, 
        &quot;indices&quot;: [
         0, 
         22
        ], 
-       &quot;expanded_url&quot;: &quot;http://radar.oreilly.com&quot;, 
-       &quot;display_url&quot;: &quot;radar.oreilly.com&quot;
+       &quot;expanded_url&quot;: &quot;http://news.google.com/news?hl=en&amp;ned=us&amp;q=%22sean+michael+kerner%22&amp;ie=UTF-8&amp;scorin&quot;, 
+       &quot;display_url&quot;: &quot;news.google.com/news?hl=en&amp;ned\u2026&quot;
       }
      ]
     }, 
@@ -2320,32 +2380,32 @@ In&nbsp;[62]:
      &quot;urls&quot;: []
     }
    }, 
-   &quot;followers_count&quot;: 1780696, 
-   &quot;profile_sidebar_border_color&quot;: &quot;87BC44&quot;, 
-   &quot;id_str&quot;: &quot;2384071&quot;, 
-   &quot;profile_background_color&quot;: &quot;9AE4E8&quot;, 
-   &quot;listed_count&quot;: 26884, 
+   &quot;followers_count&quot;: 7557, 
+   &quot;profile_sidebar_border_color&quot;: &quot;181A1E&quot;, 
+   &quot;id_str&quot;: &quot;15488482&quot;, 
+   &quot;profile_background_color&quot;: &quot;1A1B1F&quot;, 
+   &quot;listed_count&quot;: 401, 
    &quot;is_translation_enabled&quot;: false, 
-   &quot;utc_offset&quot;: -25200, 
-   &quot;statuses_count&quot;: 30298, 
-   &quot;description&quot;: &quot;Founder and CEO, O&apos;Reilly Media. Watching the alpha geeks, sharing their stories, helping the future unfold.&quot;, 
-   &quot;friends_count&quot;: 1223, 
-   &quot;location&quot;: &quot;Sebastopol, CA&quot;, 
-   &quot;profile_link_color&quot;: &quot;0000FF&quot;, 
-   &quot;profile_image_url&quot;: &quot;http://pbs.twimg.com/profile_images/2823681988/f4f6f2bed8ab4d5a48dea4b9ea85d5f1_normal.jpeg&quot;, 
-   &quot;following&quot;: true, 
+   &quot;utc_offset&quot;: -14400, 
+   &quot;statuses_count&quot;: 21117, 
+   &quot;description&quot;: &quot;IT consultant, technology user, tinkerer and sometimes Klingon&quot;, 
+   &quot;friends_count&quot;: 1210, 
+   &quot;location&quot;: &quot;online&quot;, 
+   &quot;profile_link_color&quot;: &quot;2FC2EF&quot;, 
+   &quot;profile_image_url&quot;: &quot;http://pbs.twimg.com/profile_images/422904373/vulcan_salute_bigger_normal.png&quot;, 
+   &quot;following&quot;: false, 
    &quot;geo_enabled&quot;: true, 
-   &quot;profile_background_image_url&quot;: &quot;http://pbs.twimg.com/profile_background_images/3587880/notes.gif&quot;, 
-   &quot;screen_name&quot;: &quot;timoreilly&quot;, 
+   &quot;profile_background_image_url&quot;: &quot;http://abs.twimg.com/images/themes/theme9/bg.gif&quot;, 
+   &quot;screen_name&quot;: &quot;TechJournalist&quot;, 
    &quot;lang&quot;: &quot;en&quot;, 
    &quot;profile_background_tile&quot;: false, 
-   &quot;favourites_count&quot;: 278, 
-   &quot;name&quot;: &quot;Tim O&apos;Reilly&quot;, 
+   &quot;favourites_count&quot;: 2548, 
+   &quot;name&quot;: &quot;Sean Kerner&quot;, 
    &quot;notifications&quot;: false, 
-   &quot;url&quot;: &quot;http://t.co/5086iX7oyT&quot;, 
-   &quot;created_at&quot;: &quot;Tue Mar 27 01:14:05 +0000 2007&quot;, 
+   &quot;url&quot;: &quot;http://t.co/zA94vcOwI7&quot;, 
+   &quot;created_at&quot;: &quot;Sat Jul 19 00:55:42 +0000 2008&quot;, 
    &quot;contributors_enabled&quot;: false, 
-   &quot;time_zone&quot;: &quot;Pacific Time (US &amp; Canada)&quot;, 
+   &quot;time_zone&quot;: &quot;Eastern Time (US &amp; Canada)&quot;, 
    &quot;protected&quot;: false, 
    &quot;default_profile&quot;: false, 
    &quot;is_translator&quot;: false
@@ -2354,7 +2414,7 @@ In&nbsp;[62]:
   &quot;in_reply_to_user_id_str&quot;: null, 
   &quot;possibly_sensitive&quot;: false, 
   &quot;lang&quot;: &quot;en&quot;, 
-  &quot;created_at&quot;: &quot;Wed Jul 23 17:44:30 +0000 2014&quot;, 
+  &quot;created_at&quot;: &quot;Wed Aug 20 22:33:34 +0000 2014&quot;, 
   &quot;in_reply_to_status_id_str&quot;: null, 
   &quot;place&quot;: null, 
   &quot;metadata&quot;: {
@@ -2366,55 +2426,42 @@ In&nbsp;[62]:
   &quot;follow_request_sent&quot;: false, 
   &quot;profile_use_background_image&quot;: true, 
   &quot;default_profile_image&quot;: false, 
-  &quot;id&quot;: 396116707, 
-  &quot;profile_background_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_background_images/858686207/0640fe34cda4ff505cace54159344e7a.png&quot;, 
+  &quot;id&quot;: 9463342, 
+  &quot;profile_background_image_url_https&quot;: &quot;https://abs.twimg.com/images/themes/theme15/bg.png&quot;, 
   &quot;verified&quot;: false, 
   &quot;profile_text_color&quot;: &quot;333333&quot;, 
-  &quot;profile_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_images/1601462036/icon_normal.png&quot;, 
-  &quot;profile_sidebar_fill_color&quot;: &quot;EFEFEF&quot;, 
+  &quot;profile_image_url_https&quot;: &quot;https://pbs.twimg.com/profile_images/3360362988/bffebd957a5d9a2c34fa90307db35330_normal.jpeg&quot;, 
+  &quot;profile_sidebar_fill_color&quot;: &quot;C0DFEC&quot;, 
   &quot;entities&quot;: {
-   &quot;url&quot;: {
-    &quot;urls&quot;: [
-     {
-      &quot;url&quot;: &quot;http://t.co/BGrU0dQ4HZ&quot;, 
-      &quot;indices&quot;: [
-       0, 
-       22
-      ], 
-      &quot;expanded_url&quot;: &quot;http://realizingempathy.com/&quot;, 
-      &quot;display_url&quot;: &quot;realizingempathy.com&quot;
-     }
-    ]
-   }, 
    &quot;description&quot;: {
     &quot;urls&quot;: []
    }
   }, 
-  &quot;followers_count&quot;: 1066, 
-  &quot;profile_sidebar_border_color&quot;: &quot;000000&quot;, 
-  &quot;id_str&quot;: &quot;396116707&quot;, 
-  &quot;profile_background_color&quot;: &quot;131516&quot;, 
-  &quot;listed_count&quot;: 37, 
+  &quot;followers_count&quot;: 218, 
+  &quot;profile_sidebar_border_color&quot;: &quot;A8C7F7&quot;, 
+  &quot;id_str&quot;: &quot;9463342&quot;, 
+  &quot;profile_background_color&quot;: &quot;022330&quot;, 
+  &quot;listed_count&quot;: 25, 
   &quot;is_translation_enabled&quot;: false, 
   &quot;utc_offset&quot;: -14400, 
-  &quot;statuses_count&quot;: 1475, 
-  &quot;description&quot;: &quot;Through the lens of the creative process, we reframe what empathy is, why it is valuable, and how it can be better realized, developed, and facilitated.&quot;, 
-  &quot;friends_count&quot;: 214, 
-  &quot;location&quot;: &quot;\uacf5\uac10\uc758 \uc2e4\ud604&quot;, 
-  &quot;profile_link_color&quot;: &quot;009999&quot;, 
-  &quot;profile_image_url&quot;: &quot;http://pbs.twimg.com/profile_images/1601462036/icon_normal.png&quot;, 
+  &quot;statuses_count&quot;: 3090, 
+  &quot;description&quot;: &quot;Suffers from skiing addiction; Director of Strategic Programs at The Linux Foundation. Did I mention also slightly addicted to technology?&quot;, 
+  &quot;friends_count&quot;: 314, 
+  &quot;location&quot;: &quot;&quot;, 
+  &quot;profile_link_color&quot;: &quot;0084B4&quot;, 
+  &quot;profile_image_url&quot;: &quot;http://pbs.twimg.com/profile_images/3360362988/bffebd957a5d9a2c34fa90307db35330_normal.jpeg&quot;, 
   &quot;following&quot;: false, 
   &quot;geo_enabled&quot;: false, 
-  &quot;profile_banner_url&quot;: &quot;https://pbs.twimg.com/profile_banners/396116707/1398202109&quot;, 
-  &quot;profile_background_image_url&quot;: &quot;http://pbs.twimg.com/profile_background_images/858686207/0640fe34cda4ff505cace54159344e7a.png&quot;, 
-  &quot;screen_name&quot;: &quot;realizempathy&quot;, 
+  &quot;profile_banner_url&quot;: &quot;https://pbs.twimg.com/profile_banners/9463342/1398310027&quot;, 
+  &quot;profile_background_image_url&quot;: &quot;http://abs.twimg.com/images/themes/theme15/bg.png&quot;, 
+  &quot;screen_name&quot;: &quot;mdolan&quot;, 
   &quot;lang&quot;: &quot;en&quot;, 
-  &quot;profile_background_tile&quot;: true, 
-  &quot;favourites_count&quot;: 0, 
-  &quot;name&quot;: &quot;Realizing Empathy &quot;, 
+  &quot;profile_background_tile&quot;: false, 
+  &quot;favourites_count&quot;: 89, 
+  &quot;name&quot;: &quot;Mike Dolan&quot;, 
   &quot;notifications&quot;: false, 
-  &quot;url&quot;: &quot;http://t.co/BGrU0dQ4HZ&quot;, 
-  &quot;created_at&quot;: &quot;Sat Oct 22 19:33:05 +0000 2011&quot;, 
+  &quot;url&quot;: null, 
+  &quot;created_at&quot;: &quot;Mon Oct 15 21:10:59 +0000 2007&quot;, 
   &quot;contributors_enabled&quot;: false, 
   &quot;time_zone&quot;: &quot;Eastern Time (US &amp; Canada)&quot;, 
   &quot;protected&quot;: false, 
@@ -2425,7 +2472,7 @@ In&nbsp;[62]:
  &quot;in_reply_to_user_id_str&quot;: null, 
  &quot;possibly_sensitive&quot;: false, 
  &quot;lang&quot;: &quot;en&quot;, 
- &quot;created_at&quot;: &quot;Wed Jul 23 17:52:37 +0000 2014&quot;, 
+ &quot;created_at&quot;: &quot;Thu Aug 21 02:37:49 +0000 2014&quot;, 
  &quot;in_reply_to_status_id_str&quot;: null, 
  &quot;place&quot;: null, 
  &quot;metadata&quot;: {
@@ -2460,7 +2507,7 @@ In&nbsp;[62]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[63]:
+In&nbsp;[7]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2482,12 +2529,12 @@ In&nbsp;[63]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[63]:</div>
+    Out[7]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-[u&apos;https://t.co/2ZEdQkkKay&apos;]
+[u&apos;http://t.co/e4Z5rlGpLb&apos;]
 </pre>
 </div>
 
@@ -2510,7 +2557,7 @@ In&nbsp;[63]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[64]:
+In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2529,21 +2576,21 @@ In&nbsp;[64]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[64]:</div>
+    Out[8]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-[u&apos;https://t.co/2ZEdQkkKay&apos;,
- u&apos;http://t.co/cO7YdrGLdY&apos;,
- u&apos;http://t.co/eaMSvVpF7X&apos;,
- u&apos;http://t.co/aQnGLjOPS5&apos;,
- u&apos;https://t.co/SHtkPGHLiN&apos;,
- u&apos;http://t.co/V8bQGOf6Kg&apos;,
- u&apos;http://t.co/N1zoVdxyeX&apos;,
- u&apos;http://t.c\u2026&apos;,
- u&apos;http://t.co/hHrnz8SmqO&apos;,
- u&apos;http://t.co/fqPi7Vko9e&apos;]
+[u&apos;http://t.co/e4Z5rlGpLb&apos;,
+ u&apos;http://t.co/bDMkG6lgQX&apos;,
+ u&apos;http://t.co/CLOf5nsdPp&apos;,
+ u&apos;http://t.co/sp1g2oWfHB&apos;,
+ u&apos;http://t.co/OxrSYOrm6S&apos;,
+ u&apos;http://t.\u2026&apos;,
+ u&apos;http://t.co/dMikYBhbpd&apos;,
+ u&apos;http://t.co/tMyCAxBwyS),&apos;,
+ u&apos;http://t.co/26nvyxuH30&apos;,
+ u&apos;http://t.co/sf6p5\u2026&apos;]
 </pre>
 </div>
 
@@ -2581,7 +2628,7 @@ Looking at the JSON again, it looks like a lot of these have <code>[&#39;entitie
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[65]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2603,16 +2650,16 @@ In&nbsp;[65]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[65]:</div>
+    Out[9]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-[u&apos;https://github.com/technoweenie/grohl&apos;,
- u&apos;http://slidesha.re/1ocu4p6&apos;,
- u&apos;https://github.com/blog/1863-pub-quiz-night-in-portland&apos;,
- u&apos;http://buff.ly/1nUIQMp&apos;,
- u&apos;http://buff.ly/1nUIRjo&apos;]
+[u&apos;http://www.slideshare.net/jpetazzo/docker-linux-containers-lxc-and-security&apos;,
+ u&apos;http://bit.ly/1vjbwEV&apos;,
+ u&apos;http://www.brendangregg.com/linuxperf.html&apos;,
+ u&apos;http://www.slideshare.net/aimeemaree/firefoxos-and-its-use-of-linux-a-deep-dive-into-gonk-architecture&apos;,
+ u&apos;http://instagram.com/p/r8WieND4Jc/&apos;]
 </pre>
 </div>
 
@@ -2646,13 +2693,13 @@ In&nbsp;[65]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[66]:
+In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">rv</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;http://buff.ly/1nUIRjo&#39;</span><span class="p">)</span>
+<span class="n">rv</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;http://bit.ly/1vjbwEV&#39;</span><span class="p">)</span>
 <span class="n">rv</span><span class="o">.</span><span class="n">url</span>
 </pre></div>
 
@@ -2665,12 +2712,12 @@ In&nbsp;[66]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[66]:</div>
+    Out[10]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-u&apos;http://girldevelopit.com/codeofconduct?utm_content=buffer9360b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer&apos;
+u&apos;http://www.linuxtoday.com/developer/what-the-linux-foundation-does-for-linux-linuxcon.html&apos;
 </pre>
 </div>
 
@@ -2704,7 +2751,7 @@ u&apos;http://girldevelopit.com/codeofconduct?utm_content=buffer9360b&amp;utm_me
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[67]:
+In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2750,7 +2797,7 @@ In&nbsp;[67]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[74]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2766,24 +2813,26 @@ In&nbsp;[74]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[74]:</div>
+    Out[12]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-[(u&apos;http://www.slideshare.net/Timoreilly1/technological-revolutions-and-cultural-revolutions-oscon-2014&apos;,
-  11),
- (u&apos;https://plus.google.com/+Hastexo/posts/iPm4Daf39pn&apos;, 4),
- (u&apos;https://github.com/blog/1863-pub-quiz-night-in-portland&apos;, 4),
- (u&apos;http://opensource.com/life/14/7/oscon-2014&apos;, 3),
- (u&apos;https://plus.google.com/+DJAdams/posts/gi6dJLJCYSV?pid=6038974065647024770&amp;oid=110526626182299357893&apos;,
+[(u&apos;http://www.brendangregg.com/linuxperf.html&apos;, 28),
+ (u&apos;http://www.slideshare.net/jpetazzo/docker-linux-containers-lxc-and-security&apos;,
+  15),
+ (u&apos;http://www.slideshare.net/aimeemaree/firefoxos-and-its-use-of-linux-a-deep-dive-into-gonk-architecture&apos;,
+  9),
+ (u&apos;http://lccona14.sched.org/event/8e7a38ff932af2546adf72fe77dd0374&apos;, 7),
+ (u&apos;http://www.zdnet.com/linus-torvalds-still-wants-the-linux-desktop-7000032805/&apos;,
+  6),
+ (u&apos;http://www.linuxtoday.com/developer/what-the-linux-foundation-does-for-linux-linuxcon.html&apos;,
   2),
- (u&apos;http://blog.lfe.io/conferences/2014/07/23/0849-erlang--oscon-2014/&apos;, 2),
- (u&apos;https://www.healthcare.gov/&apos;, 2),
- (u&apos;http://instagram.com/p/qzVh1itQ40/&apos;, 2),
- (u&apos;https://twitter.com/timoreilly/statuses/491722847597785089&apos;, 2),
- (u&apos;https://cloudant.com/blog/couchdb-and-mongodb-let-our-query-apis-combine/?utm_source=twitter&amp;utm_medium=social&amp;utm_campaign=cloudant%20query&apos;,
-  2)]
+ (u&apos;http://instagram.com/p/r8JiCXjU82/&apos;, 1),
+ (u&apos;http://www.linuxtoday.com/developer/thanks-for-making-games-faster-top-10-quotes-from-the-linux-kernel-developer-panel-linuxcon.html&apos;,
+  1),
+ (u&apos;http://instagram.com/p/r8WieND4Jc/&apos;, 1),
+ (u&apos;http://instagram.com/p/r8K8VHD4IC/&apos;, 1)]
 </pre>
 </div>
 
@@ -2818,87 +2867,7 @@ In&nbsp;[74]:
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[37]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>ipython nbconvert --to python Tweet<span class="se">\ </span>Relief.ipynb
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-[NbConvertApp] Using existing profile dir: u&apos;/Users/jbarratt/.ipython/profile_default&apos;
-[NbConvertApp] Converting notebook Tweet Relief.ipynb to python
-[NbConvertApp] Support files will be in Tweet Relief_files/
-[NbConvertApp] Loaded template python.tpl
-[NbConvertApp] Writing 1882 bytes to Tweet Relief.py
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[41]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>head -18 Tweet<span class="se">\ </span>Relief.py | grep -v <span class="s1">&#39;^\s*$&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-# coding: utf-8
-# In[37]:
-import json
-import twitter
-# In[41]:
-creds = json.load(open(&apos;/Users/jbarratt/.twitter.json&apos;))
-auth = twitter.oauth.OAuth(creds[&apos;access_token&apos;], 
-                           creds[&apos;access_token_secret&apos;],
-                           creds[&apos;api_key&apos;], 
-                           creds[&apos;api_secret&apos;])
-twitter_api = twitter.Twitter(auth=auth)
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
+</div></section>
     </section><section>
     <section>
     
@@ -2909,6 +2878,19 @@ twitter_api = twitter.Twitter(auth=auth)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="the-ipython-in-ipython-notebook-i-nteractive-python">The &quot;IPython&quot; in &quot;IPython Notebook&quot;`: I<em>nteractive</em> Python</h1>
 <div class="stretch"><img src="PresentationImages/IPython_v_Notebook_v2.png"/></div>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="the-future">The Future</h1>
+<div class="stretch"><img src="PresentationImages/jupyter.png"/></div>
 </div>
 </div>
 </div></section>
@@ -3060,7 +3042,7 @@ In&nbsp;[24]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3095,7 +3077,7 @@ In&nbsp;[28]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1000 loops, best of 3: 278 µs per loop
+1000 loops, best of 3: 249 µs per loop
 
 </pre>
 </div>
@@ -3126,7 +3108,7 @@ In&nbsp;[15]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1000 loops, best of 3: 385 µs per loop
+10000 loops, best of 3: 179 µs per loop
 
 </pre>
 </div>
@@ -3255,19 +3237,6 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 <p>This is the gateway drug that gets many people into IPython Notebook. It&#39;s the real sweet spot between what makes Python great (pandas, scikit*, numpy, matplotlib, etc) and IPython Notebook great (Literate, Visual, Interactive, Iterative.)</p>
 <p><a href="http://localhost:8888/notebooks/PortlandCrime.ipynb"><img src="PresentationImages/bigdata.jpg" alt="big data"></a></p>
 <p><small>Did I permanenently ruin your ability to hear the term &#39;big data&#39; without thinking of this? You&#39;re welcome.</small></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="want-more-data-go-to-f150-next-">Want more Data? Go to F150 Next!</h1>
-<p><img src="PresentationImages/F150.png" alt="DataAnalysis"></p>
 </div>
 </div>
 </div></section>
